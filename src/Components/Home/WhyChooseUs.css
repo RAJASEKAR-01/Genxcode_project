@@ -1,0 +1,75 @@
+.why {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-header {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.why-header h2 {
+  font-size: 2.4rem;
+  margin: 0.8rem 0;
+  color: #111;
+}
+
+.why-header p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.why-card {
+  padding: 2rem;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #111;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
