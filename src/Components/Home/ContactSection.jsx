@@ -11,7 +11,7 @@ const ContactSection = () => {
     emailjs
       .sendForm(
         "service_831sttf",       // Your Service ID
-        "template_31vtnyf",      // Your Template ID
+        "template_v1z9eb2",      // Your Template ID
         form.current,             // ✅ Must pass your form reference
         { publicKey: "4pl7e5RawQmYJTs4y" } // Your Public Key
       )
