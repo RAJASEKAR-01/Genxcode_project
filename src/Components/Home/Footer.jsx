@@ -33,14 +33,15 @@ const Footer = () => {
             <li>Web Applications</li>
             <li>Ecommerce Solutions</li>
             <li>UI/UX Design</li>
+            <li>Digital Marketing</li>
           </ul>
         </div>
 
         {/* Contact */}
         <div className="footer-contact">
           <h4>Contact</h4>
-          <p>Email: genxcode@gmail.com</p>
-          <p>Phone: +91 XXXXX XXXXX</p>
+          <p>Email: genxcodebusiness@gmail.com</p>
+          <p>Phone: +91 9087435689</p>
           <p>Location: India</p>
         </div>
 

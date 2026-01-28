@@ -1,5 +1,17 @@
-const Home = () => {
-  return <h1 style={{ padding: "2rem" }}>About</h1>;
+import AboutHero from "../Components/about/AboutHero";
+import AboutMission from "../Components/about/AboutMission";
+import AboutStats from "../Components/about/AboutStats";
+import AboutCTA from "../Components/about/AboutCTA";
+
+const About = () => {
+  return (
+    <>
+      <AboutHero />
+      <AboutMission />
+      <AboutStats />
+      <AboutCTA />
+    </>
+  );
 };
 
-export default Home;
+export default About;
