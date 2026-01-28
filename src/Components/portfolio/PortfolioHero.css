@@ -1,0 +1,21 @@
+.portfolio-hero {
+  padding: 80px 8%;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.portfolio-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.portfolio-hero h1 span {
+  color: #2563eb;
+}
+
+.portfolio-hero p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 12px;
+}

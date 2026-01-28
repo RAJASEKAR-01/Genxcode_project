@@ -4,9 +4,11 @@
   z-index: 1000;
   background: #ffffff;
   border-bottom: 1px solid #eee;
+  
 }
 
 .navbar-container {
+   /* ADD THIS */
   max-width: 1200px;
   margin: auto;
   padding: 1rem 2rem;
@@ -85,11 +87,16 @@
     gap: 1rem;
     padding: 2rem 0;
     border-top: 1px solid #eee;
-    display: none; /* hide by default */
+      opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease; /* hide by default */
   }
 
   .nav-links.mobile-active {
-    display: flex;
+    opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
   }
 
   .hamburger {

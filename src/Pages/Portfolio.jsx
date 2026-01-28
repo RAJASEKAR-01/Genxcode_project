@@ -1,5 +1,13 @@
+import PortfolioHero from "../Components/portfolio/PortfolioHero";
+import PortfolioGrid from "../Components/portfolio/PortfolioGrid";
+
 const Portfolio = () => {
-  return <h1 style={{ padding: "2rem" }}>Portfolio</h1>;
+  return (
+    <>
+      <PortfolioHero />
+      <PortfolioGrid />
+    </>
+  );
 };
 
 export default Portfolio;
