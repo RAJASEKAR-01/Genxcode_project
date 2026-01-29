@@ -4,7 +4,7 @@ import { fadeUp, staggerContainer, scaleIn } from "../Utils/motion";
 
 const services = [
   {
-    title: "Starter Website",
+    title: "Basic Website",
     price: "₹4,999",
     features: ["Responsive Design", "1–3 Pages", "Contact Form", "Basic SEO"],
   },
@@ -63,14 +63,14 @@ const services = [
   {
     title: "SEO & Automation",
     price: "₹2,500 – ₹6,000",
+    tag: "High Demand",
+    featured: true,
     features: [
       "Google SEO Setup",
       "Search Console",
       "Automation Tools",
       "Performance Optimization",
     ],
-    featured: true,
-    tag: "High Demand",
   },
   {
     title: "Graphic Design",
@@ -110,8 +110,7 @@ const Services = () => {
       className="services-section"
       variants={staggerContainer}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      animate="show"   // ✅ FIX: works on mobile & desktop
     >
       {/* Header */}
       <motion.div className="services-header" variants={fadeUp}>
@@ -122,7 +121,7 @@ const Services = () => {
       </motion.div>
 
       {/* Cards */}
-      <motion.div className="services-cards" variants={staggerContainer}>
+      <div className="services-cards">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -130,6 +129,7 @@ const Services = () => {
             variants={scaleIn}
           >
             {service.tag && <span className="tag">{service.tag}</span>}
+
             <h3>{service.title}</h3>
             <p className="price">{service.price}</p>
 
@@ -142,7 +142,7 @@ const Services = () => {
             <button>Get Started</button>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </motion.section>
   );
 };

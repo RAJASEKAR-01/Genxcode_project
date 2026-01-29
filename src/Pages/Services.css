@@ -171,3 +171,6 @@
 .service-box:hover::after {
   opacity: 1;
 }
+.service-cards{
+  opacity: 1 !important;
+}
