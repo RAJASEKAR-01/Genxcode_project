@@ -2,6 +2,108 @@ import "./Services.css";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, scaleIn } from "../Utils/motion";
 
+const services = [
+  {
+    title: "Starter Website",
+    price: "₹4,999",
+    features: ["Responsive Design", "1–3 Pages", "Contact Form", "Basic SEO"],
+  },
+  {
+    title: "Business Website",
+    price: "₹9,999",
+    tag: "Most Popular",
+    featured: true,
+    features: [
+      "5–7 Pages",
+      "Premium UI Design",
+      "WhatsApp Integration",
+      "SEO Optimized",
+    ],
+  },
+  {
+    title: "E-Commerce Store",
+    price: "₹19,999",
+    features: [
+      "Product Management",
+      "Cart & Checkout",
+      "Payment Gateway",
+      "Admin Dashboard",
+    ],
+  },
+  {
+    title: "Landing Page",
+    price: "₹3,999",
+    features: [
+      "High Conversion Design",
+      "Fast Load Speed",
+      "Lead Capture Form",
+      "Ad Ready",
+    ],
+  },
+  {
+    title: "UI / UX Design",
+    price: "Custom",
+    features: [
+      "Figma Design",
+      "User-Centric Layout",
+      "Modern Components",
+      "Mobile First",
+    ],
+  },
+  {
+    title: "Web App Development",
+    price: "Custom",
+    features: [
+      "React / MERN Stack",
+      "Authentication",
+      "Dashboard Panels",
+      "API Integration",
+    ],
+  },
+  {
+    title: "SEO & Automation",
+    price: "₹2,500 – ₹6,000",
+    features: [
+      "Google SEO Setup",
+      "Search Console",
+      "Automation Tools",
+      "Performance Optimization",
+    ],
+    featured: true,
+    tag: "High Demand",
+  },
+  {
+    title: "Graphic Design",
+    price: "Custom Pricing",
+    features: [
+      "Social Media Creatives",
+      "Brand Posters",
+      "UI Graphics",
+      "Marketing Designs",
+    ],
+  },
+  {
+    title: "Website Maintenance & Support",
+    price: "Monthly Plans",
+    features: [
+      "Bug Fixes",
+      "Content Updates",
+      "Security Monitoring",
+      "Performance Checks",
+    ],
+  },
+  {
+    title: "Web Hosting & Domain Services",
+    price: "Yearly Plans",
+    features: [
+      "Domain Registration",
+      "Fast Hosting",
+      "SSL Certificate",
+      "Email Setup",
+    ],
+  },
+];
+
 const Services = () => {
   return (
     <motion.section
@@ -16,50 +118,30 @@ const Services = () => {
         <h1>
           Our <span>Services</span>
         </h1>
-        <p>Modern web solutions crafted for growing businesses</p>
+        <p>Modern digital solutions crafted to grow your business</p>
       </motion.div>
 
       {/* Cards */}
-      <motion.div
-        className="services-cards"
-        variants={staggerContainer}
-      >
-        <motion.div className="service-box" variants={scaleIn}>
-          <h3>Starter Website</h3>
-          <p className="price">₹4,999</p>
-          <ul>
-            <li>Responsive Design</li>
-            <li>1–3 Pages</li>
-            <li>Contact Form</li>
-            <li>Basic SEO</li>
-          </ul>
-          <button>Get Started</button>
-        </motion.div>
+      <motion.div className="services-cards" variants={staggerContainer}>
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className={`service-box ${service.featured ? "featured" : ""}`}
+            variants={scaleIn}
+          >
+            {service.tag && <span className="tag">{service.tag}</span>}
+            <h3>{service.title}</h3>
+            <p className="price">{service.price}</p>
 
-        <motion.div className="service-box featured" variants={scaleIn}>
-          <span className="tag">Most Popular</span>
-          <h3>Business Website</h3>
-          <p className="price">₹9,999</p>
-          <ul>
-            <li>5–7 Pages</li>
-            <li>Premium UI Design</li>
-            <li>WhatsApp Integration</li>
-            <li>SEO Optimized</li>
-          </ul>
-          <button>Get Started</button>
-        </motion.div>
+            <ul>
+              {service.features.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
 
-        <motion.div className="service-box" variants={scaleIn}>
-          <h3>E-Commerce</h3>
-          <p className="price">₹19,999</p>
-          <ul>
-            <li>Product Management</li>
-            <li>Cart & Checkout</li>
-            <li>Payment Gateway</li>
-            <li>Admin Dashboard</li>
-          </ul>
-          <button>Get Started</button>
-        </motion.div>
+            <button>Get Started</button>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.section>
   );
