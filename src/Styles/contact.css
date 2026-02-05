@@ -1,0 +1,178 @@
+.contact-hero-alt {
+  padding: 100px 8%;
+  text-align: center;
+  background: #0f172a;
+  color: #fff;
+}
+
+.contact-hero-alt span {
+  color: #2563eb;
+}
+
+/* Contact Channels */
+.contact-channels {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  background: #f8fafc;
+}
+
+/* Card Base */
+.channel-card {
+  padding: 36px 30px;
+  border-radius: 22px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #0f172a;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* Icon */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+}
+
+/* Text */
+.channel-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.channel-card .value {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.channel-card span {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* CTA Button */
+.action-btn {
+  margin-top: 22px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Hover */
+.channel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* Email */
+.channel-card.email .icon-box {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+
+/* WhatsApp (Featured) */
+.channel-card.whatsapp {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border: none;
+}
+
+.channel-card.whatsapp span {
+  color: #dcfce7;
+}
+
+.channel-card.whatsapp .icon-box {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.channel-card.featured {
+  box-shadow: 0 30px 60px rgba(34, 197, 94, 0.45);
+}
+
+/* Call */
+.channel-card.call .icon-box {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+
+.process-steps {
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  background: #f8fafc;
+}
+
+.step-box span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.contact-cta-alt {
+  padding: 90px 8%;
+  background: #2563eb;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-cta-alt .cta-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 14px 36px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+/* Location Section */
+.location-section {
+  padding: 100px 8%;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.location-content {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.location-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.location-content h2 span {
+  color: #2563eb;
+}
+
+.location-content p {
+  color: #cbd5f5;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Map */
+.map-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+}
